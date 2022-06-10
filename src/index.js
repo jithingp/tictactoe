@@ -93,9 +93,11 @@ import './index.css';
 
       const moves = history.map((step,move)=>{
         const desc = move? 'Go to move # ' + move + ` | pos: (${step.row},${step.col})` : 'Go to game start'
+        const fw=(this.state.stepNumber===move)?'bold':'normal'
         return(
           <li key={move}>
-            <button onClick={()=> this.jumpTo(move)}>{desc}</button>
+            <button style={{fontWeight: `${fw}`}}
+              onClick={()=> this.jumpTo(move)}>{desc}</button>
           </li>
         )
       })
