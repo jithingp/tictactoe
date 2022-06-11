@@ -21,24 +21,21 @@ import './index.css';
     }
   
     render() {
-  
+      const num1=[0,3,6];
+
+      const rept=num1.map((ele1)=>{
+        const kept=num1.map((ele,index)=>{
+          return this.renderSquare(index+ele1);
+        })
+        return(
+          <div className="board-row">
+            {kept}
+          </div>
+        )
+      })
       return (
         <div>
-          <div className="board-row">
-            {this.renderSquare(0)}
-            {this.renderSquare(1)}
-            {this.renderSquare(2)}
-          </div>
-          <div className="board-row">
-            {this.renderSquare(3)}
-            {this.renderSquare(4)}
-            {this.renderSquare(5)}
-          </div>
-          <div className="board-row">
-            {this.renderSquare(6)}
-            {this.renderSquare(7)}
-            {this.renderSquare(8)}
-          </div>
+          {rept}
         </div>
       );
     }
