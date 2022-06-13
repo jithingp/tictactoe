@@ -103,8 +103,10 @@ import './index.css';
       let status;
       if(winner[3]){
         status='Winner: '+winner[3]
-      }else{
+      }else if(this.state.stepNumber<9){
         status = 'Next player: '+ (this.state.xIsNext?'X':'O')
+      }else{
+        status= 'Draw!'
       }
 
       return (
