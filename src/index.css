@@ -1,6 +1,7 @@
 body {
     font: 14px "Century Gothic", Futura, sans-serif;
     margin: 20px;
+    background-color: rgb(160, 214, 158);
   }
   
   ol, ul {
@@ -18,18 +19,44 @@ body {
   }
   
   .square {
-    background: #fff;
-    border: 1px solid #999;
+    background: rgb(208, 222, 11);
+    border: 3px solid rgb(21, 15, 15);
     float: left;
     font-size: 24px;
     font-weight: bold;
     line-height: 34px;
-    height: 34px;
+    height: 64px;
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
     text-align: center;
-    width: 34px;
+    width: 64px;
+  
+  }
+
+  .move-button{
+    background: #000000;
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    color: #FFFFFF;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    min-width: 150px;
+    margin-bottom: 1px;
+  }
+
+  .status-game{
+    font-weight: bold;
+    font-size: 28px;
+    margin-left: 35px;
+  }
+
+  .game-board{
+    margin-top: 50px;
   }
   
   .square:focus {
@@ -43,6 +70,7 @@ body {
   .game {
     display: flex;
     flex-direction: row;
+    justify-content: center;
   }
   
   .game-info {

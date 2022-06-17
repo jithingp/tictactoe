@@ -35,7 +35,7 @@ import './index.css';
         )
       })
       return (
-        <div>
+        <div className='board-total'>
           {rept}
         </div>
       );
@@ -95,7 +95,7 @@ import './index.css';
         const fw=(this.state.stepNumber===move)?'bold':'normal'
         return(
           <li key={move}>
-            <button style={{fontWeight: `${fw}`}}
+            <button className='move-button' style={{fontWeight: `${fw}`}}
               onClick={()=> this.jumpTo(move)}>{desc}</button>
           </li>
         )
@@ -117,7 +117,7 @@ import './index.css';
               onClick={(i)=> this.handleClick(i)} list={winner}/>
           </div>
           <div className="game-info">
-            <div>{status}</div>
+            <div className='status-game'>{status}</div>
             <ol>{moves}</ol>
           </div>
         </div>
